@@ -1,0 +1,19 @@
+<students>
+	<student sr="1" no="">
+		<name>
+			<fistname>Al</fistname>
+			<lastname>Amin</lastname>
+		</name>
+		<id>1234</id>
+		<dept>CS</dept>
+	</student>
+
+	<student sr="2" >
+		<name>
+			<fistname>Al</fistname>
+			<lastname></lastname>
+		</name>
+		<id>1234</id>
+		<dept>CS</dept>
+	</student>
+</students>
