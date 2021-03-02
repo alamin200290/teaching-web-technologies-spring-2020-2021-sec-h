@@ -9,6 +9,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home page</title>
+	<title><?=$title?></title>
 </head>
 <body>
