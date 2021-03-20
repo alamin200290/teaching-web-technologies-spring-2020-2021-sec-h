@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require_once('../model/userModel.php');
 
 	if(isset($_POST['submit'])){
 
@@ -9,11 +10,14 @@
 		if($username == "" || $password == ""){
 			echo "null submission...";
 		}else{
-			$user = $_SESSION['current_user'];
 
-			if($username == $user['username'] && $password == $user['password']){
+			$status = validateUser($username, $password);
+			if($status){
 				$_SESSION['flag'] = true;
+				$_SESSION['username'] = $username;
+
 				header('location: ../view/home.php');
+
 			}else{
 				echo "invalid user";
 			}
