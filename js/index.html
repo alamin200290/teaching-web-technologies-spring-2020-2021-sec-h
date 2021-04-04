@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Example</title>
+</head>
+<body>
+	<h1 id="myh1">JS Example</h1>
+	
+	<input type="text" name="name" id="name" onblur="changeinput()" />
+	<input type="button" name="" value="Click" onclick="changePos()">
+
+	<div id="mydiv" style="width: 100px; height: 100px; position: relative;background-color: green;">
+	</div>
+
+	<script>
+		"use strict"
+		//a = 10;
+		//var b= 20;
+
+		let c = 30;
+		const d = 40;
+
+		let array = [
+						[1, 'alamin', 3.5],
+						[1, 'alamin', 3.5],
+						[1, 'alamin', 3.5]
+					];
+
+		/*function sum(f1){
+			return f1();
+		}
+
+		let f1 = function(){
+			return 10;
+		}
+
+		//let sum = ()=> 10;
+		let data = sum(f1)*/
+
+		/*if(){
+
+		}else{
+
+		}
+
+		for (let i = 1; i >= 0; i++) {
+			
+		}
+
+		while(){
+
+		}*/
+
+		//console.log(this);
+		//alert('test');
+		//document.write('<h3>test</h3>');
+
+		function abc(){
+			document.write('test');
+		}
+
+		function changeData(){
+			/*let obj = document.getElementsByTagName('h1')[0];
+			obj.innerHTML= "test";*/
+			//document.getElementsByTagName('h1')[0].innerHTML = "test";
+			document.getElementById('myh1').innerHTML = "test";
+		}
+
+		function changeinput(){
+			let name = document.getElementById('name').value;
+			//let email = document.getElementById('email').value;
+			document.getElementById('myh1').innerHTML = name;
+		}
+
+		function changeColor(){
+			document.getElementById('myh1').style.color = "red";
+		}
+
+		function changePos(){
+			let pos = document.getElementById('mydiv').style.left;
+
+			if(pos == ""){
+				document.getElementById('mydiv').style.left = "15px";
+			}else{
+				pos = parseInt(pos.replace('px',''));
+				
+			}
+			
+		}
+
+
+
+	</script>
+</body>
+</html>
