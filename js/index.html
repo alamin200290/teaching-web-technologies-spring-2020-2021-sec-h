@@ -78,12 +78,20 @@
 
 		function changePos(){
 			let pos = document.getElementById('mydiv').style.left;
-
 			if(pos == ""){
-				document.getElementById('mydiv').style.left = "15px";
+				pos = "15px";
+				document.getElementById('mydiv').style.left = pos;
 			}else{
-				pos = parseInt(pos.replace('px',''));
-				
+				pos = parseInt(pos.replace('px', ''));
+				pos += 15;
+				document.getElementById('mydiv').style.left = pos+"px";
+			}
+
+			console.log(pos);
+			if(pos != 300){
+				setTimeout(function(){
+					changeStyle();
+				}, 1000);
 			}
 			
 		}
